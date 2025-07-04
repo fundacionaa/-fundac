@@ -581,3 +581,46 @@ body {
   .boton-cerrar:hover {
     background-color: #c82333;
   }
+  .mi-imagen-especial {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  }
+
+  .mi-imagen-especial:hover {
+  transform: scale(1.05);
+}
+/* estilos de container de proyectos */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+.item:nth-child(1),
+.item:nth-child(5),
+.item:nth-child(7) {
+  height: 32%;
+  width: 40%;
+}
+
+.item:nth-child(2),
+.item:nth-child(8) {
+  height: 32%;
+  width: 30%;
+}
+
+.item:nth-child(3),
+.item:nth-child(6),
+.item:nth-child(9) {
+  height: 32%;
+  flex-grow: 1;
+}
+
+.item:nth-child(4) {
+  height: 32%;
+  width: 25%;
+}
