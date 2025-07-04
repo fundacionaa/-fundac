@@ -456,81 +456,171 @@ form#donacion-form {
   .carousel-item {
     background-color: transparent !important;
   }
-    /* CSS De la pagina de Actualizacion Dian*/
+    /* CSS De la pagina de Actualizacion Dian
 
-  /* Contenedor de pestañas */
+ /* Fuente general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor de pestañas */
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px 8px 0 0;
+}
+
+/* Botones de pestaña */
+.tab button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 22px;
+  font-size: 16px;
+  color: #444;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  border-radius: 8px 8px 0 0;
+  font-weight: 500;
+}
+
+/* Hover sobre botón */
+.tab button:hover {
+  background-color: #f0f8ff;
+  color: #0056b3;
+}
+
+/* Pestaña activa */
+.tab button.active {
+  border-bottom: 3px solid #0056b3;
+  color: #0056b3;
+  font-weight: bold;
+  background-color: #e8f0fe;
+}
+
+/* Contenido de pestañas */
+.tabcontent {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-top: none;
+  background-color: #fff;
+  animation: fadeEffect 0.4s ease-in-out;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Transición suave */
+@keyframes fadeEffect {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Iframe PDF */
+.tabcontent iframe {
+  width: 100%;
+  height: 80vh;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
   .tab {
-    display: flex;
-    flex-wrap: wrap;
-    border-bottom: 2px solid #ccc;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
   }
 
-  /* Botones de pestaña */
   .tab button {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 20px;
-    font-size: 16px;
-    color: #333;
-    transition: all 0.3s ease;
-    border-bottom: 3px solid transparent;
-  }
-
-  /* Hover sobre botón */
-  .tab button:hover {
-    background-color: #f9f9f9;
-    color: #007BFF;
-  }
-
-  /* Pestaña activa */
-  .tab button.active {
-    border-bottom: 3px solid #007BFF;
-    color: #007BFF;
-    font-weight: bold;
-    background-color: #f5faff;
-  }
-
-  /* Contenido de pestañas */
-  .tabcontent {
-    display: none;
-    padding: 20px;
-    border: 1px solid #eee;
-    border-top: none;
-    background-color: #fff;
-    animation: fadeEffect 0.5s ease-in-out;
-  }
-
-  /* Transición suave al abrir pestaña */
-  @keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-
-  /* Iframe PDF */
-  .tabcontent iframe {
     width: 100%;
-    height: 80vh;
-    border: 1px solid #ccc;
+    text-align: left;
+    padding: 12px 16px;
+  }
+
+  .tabcontent iframe {
+    height: 65vh;
+  }
+}
+
+
+  .acciones {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .boton-descargar,
+  .boton-cerrar {
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
     border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    transition: background-color 0.3s ease;
   }
 
-  /* Responsivo */
-  @media screen and (max-width: 600px) {
-    .tab {
-      flex-direction: column;
-    }
-
-    .tab button {
-      width: 100%;
-      text-align: left;
-    }
-
-    .tabcontent iframe {
-      height: 70vh;
-    }
+  .boton-cerrar {
+    background-color: #dc3545;
   }
+
+  .boton-descargar:hover {
+    background-color: #0056b3;
+  }
+
+  .boton-cerrar:hover {
+    background-color: #c82333;
+  }
+  .mi-imagen-especial {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  }
+
+  .mi-imagen-especial:hover {
+  transform: scale(1.05);
+}
+/* estilos de container de proyectos */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+.item:nth-child(1),
+.item:nth-child(5),
+.item:nth-child(7) {
+  height: 32%;
+  width: 40%;
+}
+
+.item:nth-child(2),
+.item:nth-child(8) {
+  height: 32%;
+  width: 30%;
+}
+
+.item:nth-child(3),
+.item:nth-child(6),
+.item:nth-child(9) {
+  height: 32%;
+  flex-grow: 1;
+}
+
+.item:nth-child(4) {
+  height: 32%;
+  width: 25%;
+}
