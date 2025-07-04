@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Visualizador de PDFs</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Titan+One&display=swap" rel="stylesheet">
+    
+ 
+</head>
+<!-- Aqui inicia el header-->
+<header style="background-color: rgb(243, 129, 237); padding: 10px 0;">
+  <div class="container">
+    <nav class="navbar navbar-expand-md navbar-light" style="background-color: rgb(243, 129, 237);">
+      <!-- LOGO -->
+      <a class="navbar-brand" href="#">
+        <img src="fondo/logo.png" alt="Logo Fundación" style="max-width: 130px;" class="img-fluid">
+      </a>
+
+      <!-- TÍTULO (visible en móviles y escritorio) -->
+      <span class="navbar-text text-white mx-auto d-md-none fw-bold" style="font-size: 1.2rem;">
+        creArte para Amarte
+      </span>
+
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="index.html"></use>
+              </svg>
+              Inicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="quienessomos.html">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#Quienessomos"></use>
+              </svg>
+              ¿Quiénes Somos?
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="proyectos.html">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#Productos"></use>
+              </svg>
+              Proyectos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="aporte.html">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#Contacto"></use>
+              </svg>
+              Aporta tu ayuda
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contactenos.html">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                <use xlink:href="#Contacto"></use>
+              </svg>
+              Contáctanos
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- TÍTULO EN PANTALLAS GRANDES -->
+    <h2 id="titulo" class="text-white text-center d-none d-md-block mt-2 mb-0" style="font-size: 1.5rem;">
+      creArte para Amarte
+    </h2>
+  </div>
+</header>
+ <!-- aqui termina el header -->
+  <!--aqui inicia el cuerpo-->
+ <body>    
+    <h2 style="color: white;"> Documentos Institucionales – ESAL AG 2024</h2>
+
+  <!-- Barra de pestañas -->
+  <div class="tab">
+    <button class="tablinks" onclick="openPDF(event, 'pdf1')" id="defaultOpen">ACTA DE COSNTITUCION Y ESTATUTOS </button>
+    <button class="tablinks" onclick="openPDF(event, 'pdf2')">ESTADOS FINANCIEROS </button>
+    <button class="tablinks" onclick="openPDF(event, 'pdf3')">CERTIFICADO NUMERAL 13 PARRAFO ET</button>
+     <button class="tablinks" onclick="openPDF(event, 'pdf4')">CERTIFICADO DEL RL DE LOS ANTECEDENTES JUDICIALES</button>
+     <button class="tablinks" onclick="openPDF(event, 'pdf5')">CERTIFICADOS PROYECTOS 2024</button>
+    </div>
+
+  <!-- Contenido de cada pestaña, cada uno carga un PDF distinto -->
+  <div id="pdf1" class="tabcontent">
+    <iframe src="Actualizacion ESAL AG 2024/6. ACTA DE CONSTITUCIÓN Y ESTATUTOS-.pdf"></iframe>
+  </div>
+
+  <div id="pdf2" class="tabcontent">
+    <iframe src="Actualizacion ESAL AG 2024/4. ESTADOS FINANCIEROS 2024 FUNDACION A&A.pdf"></iframe>
+  </div>
+
+  <div id="pdf3" class="tabcontent">
+    <iframe src="Actualizacion ESAL AG 2024/5. CERTIFICADO NUMERAL 13 PARRAFO  ET.pdf"></iframe>
+  </div>
+   <div id="pdf4" class="tabcontent">
+  <iframe src="Actualizacion ESAL AG 2024/7. CERTIFICACION DEL RL DE LOS ANTECEDENTES JUDICIALES.pdf"></iframe>
+    </div>
+
+    <div id="pdf5" class="tabcontent">
+     <iframe src="Actualizacion ESAL AG 2024/CERTIFICACION PROYECTOS 2024.pdf"></iframe>
+    </div>
+
+  <script>
+    // Función para cambiar de pestaña
+    function openPDF(evt, pdfName) {
+      var i, tabcontent, tablinks;
+      // Oculta todos los contenidos de las pestañas
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      // Elimina la clase "active" de todos los botones
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      // Muestra la pestaña seleccionada y marca el botón como activo
+      document.getElementById(pdfName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    // Abre la pestaña por defecto al cargar la página
+    document.getElementById("defaultOpen").click();
+  </script>
+    <br>
+    <br>
+
+ </body>
+
+<!-- Aqui incia el footer-->
+<footer id="pie" class="container py-4" style="background-color: #fff ; color: #1a1a1a;">
+  <div class="row text-center text-md-left">
+    <!-- Sección de Logo y Frase -->
+    <div class="col-md-4 mb-3">
+      <img src="redes/logo.png" alt="Logo de la fundaciona" width="180" height="80" class="mb-2">
+      <p class="mb-0 font-italic">"Transformando vidas con arte y creatividad."</p>
+    </div>
+    <!-- Sección de Contacto -->
+    <div class="col-md-4 mb-3">
+      <h4 class="mb-3" style="color: #007bff;">Contáctanos</h4>
+      <p class="mb-1"><strong>Correo:</strong> fundaciona.acontacto@gmail.com</p>
+      <p class="mb-1"><strong>Teléfono:</strong> +573138800686</p>
+       </div>
+    <!-- Sección de Redes Sociales -->
+    <div class="col-md-4">
+      <h4 class="mb-3" style="color: #007bff;">Síguenos en redes</h4>
+      <div class="d-flex justify-content-center justify-content-md-start">
+        <a href="https://facebook.com/Fundaci%C3%B3n-A-A-103890508094027/" aria-label="Facebook" class="mx-2">
+          <img src="redes/face.png" alt="Facebook" width="40">
+        </a>
+        <a href="https://www.instagram.com/fundaciona_a?igsh=b20wNGVxYWxsNDdy" aria-label="Instagram" class="mx-2">
+          <img src="redes/insta.png" alt="Instagram" width="40">
+        </a>
+        <a href="https://wa.me/+573042496903?text=Hola,%20estoy%20interesado%20en%20tus%20productos!" target="_blank" aria-label="WhatsApp" class="mx-2">
+          <img src="redes/whap.png" alt="WhatsApp" width="40">
+        </a>
+        <a href="https://www.youtube.com/@fundacionaa4293" aria-label="youtube" class="mx-2">
+          <img src="redes/youtube.png" alt="Instagram" width="40">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--documentos dian -->
+  <div class="text-center mt-3">
+  <p class="mb-0" style="font-size: 0.9rem;">
+    <a href="ActualizacionDian.html" style="text-decoration: none; color: inherit;">
+      Actualización ESAL AG 2024
+    </a>
+  </p>
+</div>
+<!-- derechos de pagina-->
+  <div class="text-center mt-3">
+    <p class="mb-0" style="font-size: 0.9rem;">&copy; 2025 FUNDACION ACTIVIDAD INTEGRAL A TRAVES DEL ARTE  Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+ <!-- aqui termina el footer -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
