@@ -89,85 +89,62 @@
  <!-- aqui termina el header -->
 
   <!--aqui inicia el cuerpo-->
- <body>
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+ <!-- Font Awesome para íconos PDF -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <br>
+  <br>
 
-  <h2 style="color: white;">Documentos Institucionales – ESAL AG 2024</h2>
-<!-- Contenido -->
-  <div id="pdf1" class="tabcontent">
-    <div class="acciones">
-      <a href="Actualizacion ESAL AG 2024/8- ACTA DE CONSTITUCIÓN Y ESTATUTOS.pdf" download class="boton-descargar">📥 Descargar PDF</a>
-      <button onclick="cerrarPDF('pdf1')" class="boton-cerrar">❌ Cerrar</button>
+
+  <h2 style="color: white;">📑 Documentos Institucionales – ESAL AG 2024</h2>
+<br>
+<br>
+
+  <!-- Documento 1 -->
+  <div class="pdf-item">
+    <div class="titulo-pdf">
+      <i class="fas fa-file-pdf"></i> ACTA DE CONSTITUCIÓN Y ESTATUTOS
     </div>
     <iframe src="Actualizacion ESAL AG 2024/8- ACTA DE CONSTITUCIÓN Y ESTATUTOS.pdf"></iframe>
   </div>
-<div id="pdf2" class="tabcontent">
-  <div class="acciones">
-    <a href="Actualizacion ESAL AG 2024/4. ESTADOS FINANCIEROS 2024 FUNDACION A&A.pdf" download class="boton-descargar">📥 Descargar PDF</a>
-    <button onclick="cerrarPDF('pdf2')" class="boton-cerrar">❌ Cerrar</button>
+
+  <!-- Documento 2 -->
+  <div class="pdf-item">
+    <div class="titulo-pdf">
+      <i class="fas fa-file-pdf"></i> ESTADOS FINANCIEROS
+    </div>
+    <iframe src="Actualizacion ESAL AG 2024/4. ESTADOS FINANCIEROS 2024 FUNDACION A&A.pdf"></iframe>
   </div>
-  <iframe src="Actualizacion ESAL AG 2024/4. ESTADOS FINANCIEROS 2024 FUNDACION A&A.pdf"></iframe>
-</div>
-<div id="pdf3" class="tabcontent">
-  <div class="acciones">
-    <a href="Actualizacion ESAL AG 2024/5. CERTIFICADO NUMERAL 13 PARRAFO  ET.pdf" download class="boton-descargar">📥 Descargar PDF</a>
-    <button onclick="cerrarPDF('pdf3')" class="boton-cerrar">❌ Cerrar</button>
+
+  <!-- Documento 3 -->
+  <div class="pdf-item">
+    <div class="titulo-pdf">
+      <i class="fas fa-file-pdf"></i> CERTIFICADO NUMERAL 13
+    </div>
+    <iframe src="Actualizacion ESAL AG 2024/5. CERTIFICADO NUMERAL 13 PARRAFO  ET.pdf"></iframe>
   </div>
-  <iframe src="Actualizacion ESAL AG 2024/5. CERTIFICADO NUMERAL 13 PARRAFO  ET.pdf"></iframe>
-</div>
 
-<div id="pdf4" class="tabcontent">
-  <div class="acciones">
-    <a href="Actualizacion ESAL AG 2024/7. CERTIFICACION DEL RL DE LOS ANTECEDENTES JUDICIALES.pdf" download class="boton-descargar">📥 Descargar PDF</a>
-    <button onclick="cerrarPDF('pdf4')" class="boton-cerrar">❌ Cerrar</button>
+  <!-- Documento 4 -->
+  <div class="pdf-item">
+    <div class="titulo-pdf">
+      <i class="fas fa-file-pdf"></i> ANTECEDENTES JUDICIALES
+    </div>
+    <iframe src="Actualizacion ESAL AG 2024/7. CERTIFICACION DEL RL DE LOS ANTECEDENTES JUDICIALES.pdf"></iframe>
   </div>
-  <iframe src="Actualizacion ESAL AG 2024/7. CERTIFICACION DEL RL DE LOS ANTECEDENTES JUDICIALES.pdf"></iframe>
-</div>
-<div id="pdf5" class="tabcontent">
-  <div class="acciones">
-    <a href="Actualizacion ESAL AG 2024/CERTIFICACION PROYECTOS 2024.pdf" download class="boton-descargar">📥 Descargar PDF</a>
-    <button onclick="cerrarPDF('pdf5')" class="boton-cerrar">❌ Cerrar</button>
+
+  <!-- Documento 5 -->
+  <div class="pdf-item">
+    <div class="titulo-pdf">
+      <i class="fas fa-file-pdf"></i> CERTIFICADOS PROYECTOS
+    </div>
+    <iframe src="Actualizacion ESAL AG 2024/CERTIFICACION PROYECTOS 2024.pdf"></iframe>
   </div>
-  <iframe src="Actualizacion ESAL AG 2024/CERTIFICACION PROYECTOS 2024.pdf"><Actualizacion ESAL AG 2024/CERTIFICACION PROYECTOS 2024.pdf</iframe>
-</div>
-
-  <!-- Botones de pestaña -->
-  <div class="tab">
-    <button class="tablinks" onclick="openPDF(event, 'pdf1')" id="defaultOpen">ACTA DE CONSTITUCIÓN Y ESTATUTOS</button>
-    <button class="tablinks" onclick="openPDF(event, 'pdf2')">ESTADOS FINANCIEROS</button>
-    <button class="tablinks" onclick="openPDF(event, 'pdf3')">CERTIFICADO NUMERAL 13</button>
-    <button class="tablinks" onclick="openPDF(event, 'pdf4')">ANTECEDENTES JUDICIALES</button>
-    <button class="tablinks" onclick="openPDF(event, 'pdf5')">CERTIFICADOS PROYECTOS</button>
-  </div>
-  <script>
-    function openPDF(evt, pdfName) {
-      const tabcontent = document.getElementsByClassName("tabcontent");
-      const tablinks = document.getElementsByClassName("tablinks");
-
-      for (let i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-
-      for (let i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-      }
-
-      document.getElementById(pdfName).style.display = "block";
-      evt.currentTarget.classList.add("active");
-    }
-
-    document.getElementById("defaultOpen").click();
-      
-    function cerrarPDF(id) {
-      document.getElementById(id).style.display = "none";
-    }
-  
-
-  </script>
-    <br>
-    <br>
 
 </body>
-
 <!-- Aqui incia el footer-->
 <footer id="pie" class="container py-4" style="background-color: #fff ; color: #1a1a1a;">
   <div class="row text-center text-md-left">
